@@ -1,0 +1,16 @@
+
+.version 7.0
+.target sm_80
+.address_size 64
+
+.visible .entry kernel_func() {
+    .param .u64 A, B, C;
+
+    ld.global.f32 %f1, [A];
+    ld.global.f32 %f2, [B];
+
+    wmma.mma.sync.aligned.m16n16k16.row.col.f32.f32.f32.f32 %f3, %f1, %f2;
+    st.global.f32 [C], %f3;
+
+    ret;
+}
