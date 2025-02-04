@@ -2,8 +2,9 @@ import ctypes
 import numpy as np
 from functools import wraps
 from .backprop import pyptx_backprop
-from .callbacks import BaseCallback
-from .layers import get_layer_impl
+from pyptx.callbacks import BaseCallback
+from layers import get_layer_impl
+from pyptx_compiler import pyptx_compile
 
 # Load NVIDIA driver
 nvcuda = ctypes.WinDLL("nvcuda.dll")
@@ -20,7 +21,8 @@ context = ctypes.c_void_p()
 nvcuda.cuCtxCreate(ctypes.byref(context), 0, device)
 
 # Define PyPTX Compile Function
-from combiner import pyptx_compile
+from pyptx_compiler import pyptx_compile
+
 
 # Global state
 _current_model = None

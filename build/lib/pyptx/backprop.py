@@ -28,15 +28,15 @@ def pyptx_backprop(model, loss, gradients):
             grad_mem = ctypes.c_void_p()
             nvcuda.cuMemAlloc(ctypes.byref(grad_mem), gradients.nbytes)
             
-            # Copy gradients to GPU
-            nvcuda.cuMemcpyHtoD(grad_mem, gradients.ctypes.data, gradients.nbytes)
+            # Copy gradients to GPU using proper ctypes cast to avoid overflow
+            nvcuda.cuMemcpyHtoD(grad_mem, ctypes.c_void_p(gradients.ctypes.data), gradients.nbytes)
             
             # Execute kernel
             _execute_gradient_kernel(grad_kernel, grad_mem)
             
             # Get results back from GPU
             updated_grad = np.empty_like(gradients)
-            nvcuda.cuMemcpyDtoH(updated_grad.ctypes.data, grad_mem, gradients.nbytes)
+            nvcuda.cuMemcpyDtoH(ctypes.c_void_p(updated_grad.ctypes.data), grad_mem, gradients.nbytes)
             
             updated_gradients.append(updated_grad)
             

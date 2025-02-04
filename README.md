@@ -1,10 +1,6 @@
 # PyPTX Framework
 
-<<<<<<< HEAD
 A high-performance machine learning framework that directly leverages NVIDIA's PTX (Parallel Thread Execution) for CUDA acceleration. PyPTX provides a PyTorch-like interface while allowing low-level GPU optimization.
-=======
-A high-performance machine learning framework that directly leverages NVIDIA's PTX (Parallel Thread Execution) for CUDA acceleration. PyPTX provides a PyTorch-like interface while allowing low-level GPU optimization. Very buggy at the moment but i am devoloping it so any pr's are helpful. the compiler is buggy at the moment
->>>>>>> 6b3076ce34ff815403a0c66c6dbf1d7e81d60137
 
 ## 🚀 Features
 
@@ -18,7 +14,9 @@ A high-performance machine learning framework that directly leverages NVIDIA's P
 
 ## 📦 Installation
 
-```bash
+You can install the package directly from GitHub:
+
+```sh
 pip install git+https://github.com/DaronPopov/pyptx.git
 ```
 
@@ -52,7 +50,7 @@ model = neural_net()
 ## 🎛 Architecture
 
 - `ml_framework.py`: Core ML functionality with model definition and training
-- `compiler.py`: PTX code generation and compilation
+- `combiner.py`: PTX code generation and combination
 - `tensor_graph.py`: Tensor operations execution graph
 - `multi_gpu.py`: Multi-GPU workload distribution
 - `syntax.py`: High-level syntax parsing
@@ -88,7 +86,7 @@ Contributions are welcome! Feel free to:
 
 ## 📄 License
 
-Open Source - See LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
 ## ⭐ Show Your Support
 
@@ -97,3 +95,6 @@ If you find PyPTX useful, please star the repository!
 ## 📫 Contact
 
 - GitHub: [@DaronPopov](https://github.com/DaronPopov)
+
+
+

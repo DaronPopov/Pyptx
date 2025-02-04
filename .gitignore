@@ -20,6 +20,11 @@ wheels/
 .installed.cfg
 *.egg
 
+# pyptx library
+pyptx.egg-info/
+dist/
+build/
+
 # Virtual Environment
 venv/
 env/
