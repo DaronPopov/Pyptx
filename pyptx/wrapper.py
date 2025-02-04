@@ -1,5 +1,5 @@
-from .syntax import PyPTXSyntax
-from .compiler import pyptx_compile
+from .syntaxstructure import PyPTXSyntax
+from .compilation import pyptx_compile
 
 class PyPTXWrapper:
     def __init__(self, code):

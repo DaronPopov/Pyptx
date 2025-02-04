@@ -1,4 +1,4 @@
-from .syntax import PyPTXSyntax
+from .syntaxstructure import PyPTXSyntax
 from .wrapper import PyPTXWrapper
 
 class ProgrammableSyntax:

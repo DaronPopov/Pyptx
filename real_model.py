@@ -3,8 +3,8 @@ import numpy as np
 
 # Generate random data with a pattern:
 # The target is 1 if the sum of features is greater than a threshold, else 0.
-num_samples = 1000
-num_features = 16
+num_samples = 10000
+num_features = 640
 X = np.random.rand(num_samples, num_features).astype(np.float32)
 threshold = 8.0
 y = (X.sum(axis=1) > threshold).astype(np.float32).reshape(-1, 1)
@@ -22,10 +22,10 @@ def neural_net():
     pyptx.train(
         X=X,
         y=y,
-        epochs=20,
-        batch_size=32,
+        epochs=200,
+        batch_size=640,
         learning_rate=0.005
-    )
+    )        
     return "Training completed!"
 
 if __name__ == "__main__":

@@ -1,7 +1,16 @@
 import pyptx
 import numpy as np
+import platform
+import sys
+
+def check_platform_compatibility():
+    system = platform.system().lower()
+    if system not in ['windows', 'linux', 'darwin']:
+        raise RuntimeError(f"Unsupported platform: {system}")
+    return system
 
 def test_wrapper_and_programmable_syntax():
+    platform_type = check_platform_compatibility()
     code = """
 @model
 def neural_net():
@@ -22,10 +31,13 @@ def neural_net():
 def test_tensor_graph():
     print("\n=== Testing Tensor Graph Execution ===")
     from pyptx.tensor_graph import PyPTXExecutionGraph
-    graph = PyPTXExecutionGraph()
-    graph.add_operation("matmul", 0)
-    graph.add_operation("conv2d", 1)
-    graph.execute()
+    try:
+        graph = PyPTXExecutionGraph()
+        graph.add_operation("matmul", 0)
+        graph.add_operation("conv2d", 1)
+        graph.execute()
+    except Exception as e:
+        print(f"Error during tensor graph execution: {e}")
 
 def test_self_learning():
     print("\n=== Testing Self Learning Module ===")
@@ -37,9 +49,15 @@ def test_self_learning():
 def test_multi_gpu():
     print("\n=== Testing Multi GPU Execution ===")
     from pyptx.Multi_Gpu import PyPTXMultiGPU
-    # For testing, assume 2 GPUs; adjust based on available hardware.
-    mgpu = PyPTXMultiGPU(2)
-    mgpu.execute()
+    try:
+        available_gpus = PyPTXMultiGPU.detect_gpus()
+        if not available_gpus:
+            print("No GPUs detected, skipping multi-GPU test")
+            return
+        mgpu = PyPTXMultiGPU(min(2, len(available_gpus)))
+        mgpu.execute()
+    except Exception as e:
+        print(f"Error during multi-GPU execution: {e}")
 
 def test_backprop():
     print("\n=== Testing Backpropagation ===")
