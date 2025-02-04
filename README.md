@@ -1,10 +1,13 @@
 # PyPTX Framework
 
-<<<<<<< HEAD
+
+A make shift implementation of cuda from scratch in python to allow PTX (parrelel thread execution) code to run via embedded assembley inside of python bypassing cuda. Direct GPU interface
+
+ HEAD
 A high-performance machine learning framework that directly leverages NVIDIA's PTX (Parallel Thread Execution) for CUDA acceleration. PyPTX provides a PyTorch-like interface while allowing low-level GPU optimization.
 =======
 A high-performance machine learning framework that directly leverages NVIDIA's PTX (Parallel Thread Execution) for CUDA acceleration. PyPTX provides a PyTorch-like interface while allowing low-level GPU optimization. Very buggy at the moment but i am devoloping it so any pr's are helpful. the compiler is buggy at the moment
->>>>>>> 6b3076ce34ff815403a0c66c6dbf1d7e81d60137
+
 
 ## 🚀 Features
 
