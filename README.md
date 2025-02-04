@@ -1,6 +1,8 @@
-# PyPTX Framework
 
-<<<<<<< HEAD
+Introducing PyPTX. I didnt wanna learn torch or tensorflow so i made my own GG
+|
+
+
 A high-performance machine learning framework that directly leverages NVIDIA's PTX (Parallel Thread Execution) for CUDA acceleration. PyPTX provides a PyTorch-like interface while allowing low-level GPU optimization.
 =======
 
