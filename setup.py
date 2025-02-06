@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-setup(
+setup(  
     name="pyptx",
     version="0.1.0",
     packages=find_packages(),
@@ -10,7 +10,7 @@ setup(
     author="Daron Popov",
     author_email="daron94545@gmail.com",
     description="A Python framework for PTX code generation and GPU computation",
-    long_description=open("README.md", encoding="utf-8").read(),
+    license="no license the ether conjured this shit enjoy",
     url="https://github.com/DaronPopov/pyptx",
     classifiers=[
         "Development Status :: 4 - Beta",

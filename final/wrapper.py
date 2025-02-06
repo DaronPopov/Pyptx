@@ -42,6 +42,12 @@ class PyPTXWrapper:
         print("🚀 PyPTX Execution Complete!")
         return compiled_bytes
 
+# Define the @model decorator
+def model(func):
+    def wrapper(*args, **kwargs):
+        return func(*args, **kwargs)
+    return wrapper
+
 # Example: Running High-Level PyPTX Code
 code = """
 @model
