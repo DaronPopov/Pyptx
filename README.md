@@ -1,5 +1,5 @@
 # PyPTX
-
+This is the alpha build so you will have to possibly fix some things to work for your use case but this is the lowest level gpu access through python
 A questionabley high-performance machine learning framework that directly leverages NVIDIA's PTX (Parallel Thread Execution) through the nividia drivers to bypass the cuda annoyance. write direct to gpus with python and ptx assembley. PyPTX provides a PyTorch-like interface while allowing low-level GPU optimization. buggy but works with a little effort (:
 
 ## 🚀 Features
