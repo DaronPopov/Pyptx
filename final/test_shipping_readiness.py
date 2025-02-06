@@ -4,9 +4,9 @@ import logging
 import sys
 from pathlib import Path
 import ctypes
-from final.wrapper import PyPTXWrapper
-from final.Grapher import Grapher
-from final.ptx_utils import PTXLoader
+from wrapper import PyPTXWrapper
+from Grapher import Grapher
+from ptx_utils import PTXLoader
 import unittest.mock as mock
 import requests
 
