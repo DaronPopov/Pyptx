@@ -4,6 +4,9 @@ from ptx_utils import PTXLoader
 from syntaxstructure import PyPTXSyntax
 from pyptx_compiler import pyptx_compile
 
+# Commented out the deprecated tensor_graph dependency
+# from . import tensor_graph
+
 __all__ = [
     "PyPTXWrapper",
     "Grapher",
