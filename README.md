@@ -10,7 +10,7 @@ A questionabley high-performance machine learning framework that directly levera
 - Self-learning capability with dynamic weight updates: possibly(; 
 - Customizable neural network layers
 - Automatic gradient computation
-- Windows support with CUDA integration
+
 
 ## 📦 Installation
 
@@ -22,9 +22,9 @@ pip install git+https://github.com/DaronPopov/pyptx.git
 
 Requirements:
 - Python 3.7+
-- NVIDIA GPU with CUDA support
-- Windows operating system
-- CUDA Toolkit installed
+- NVIDIA GPU (dont trip bout cuda or nun of all that)
+- Windows operating system, Gods gift to humanity 
+
 
 ## 🔥 Quick Start
 
