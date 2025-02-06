@@ -51,7 +51,6 @@ model = neural_net()
 
 - `ml_framework.py`: Core ML functionality with model definition and training
 - `combiner.py`: PTX code generation and combination
-- `tensor_graph.py`: Tensor operations execution graph
 - `multi_gpu.py`: Multi-GPU workload distribution
 - `syntax.py`: High-level syntax parsing
 - `wrapper.py`: Python-PTX interface layer

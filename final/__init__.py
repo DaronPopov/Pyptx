@@ -4,7 +4,6 @@ from ptx_utils import PTXLoader
 from syntaxstructure import PyPTXSyntax
 from pyptx_compiler import pyptx_compile
 
-
 __all__ = [
     "PyPTXWrapper",
     "Grapher",
